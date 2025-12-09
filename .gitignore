@@ -1,0 +1,61 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs
+*.log
+
+# Runtime files
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Build output
+dist/
+build/
+
+# Optional npm cache
+.npm
+
+# Local env files (keep .json mock data committed)
+.env
+.env.*.local
+.env.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Misc
+.cache/
+.parcel-cache/
+
+
+# Prevent committing real secrets in example files
+.env.example
+!.env.example
+
+# Do NOT ignore JSON files in the repo (e.g. src/erp/erp.mock.db.json) - they are part of the project.
+# If you generate database files or local dumps, add them explicitly (example):
+# *.db
+# *.sqlite

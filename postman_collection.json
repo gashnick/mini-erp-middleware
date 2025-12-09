@@ -1,0 +1,76 @@
+{
+  "info": {
+    "name": "ERP Middleware MVP",
+    "_postman_id": "erp-middleware-mvp",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get customer",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "x-api-key", "value": "super-secret-test-key" }],
+        "url": {
+          "raw": "http://localhost:3000/erp/customers/1234",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["erp", "customers", "1234"]
+        }
+      }
+    },
+    {
+      "name": "Get invoices",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "x-api-key", "value": "super-secret-test-key" }],
+        "url": {
+          "raw": "http://localhost:3000/erp/customers/1234/invoices",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["erp", "customers", "1234", "invoices"]
+        }
+      }
+    },
+    {
+      "name": "Analyze customer",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "x-api-key", "value": "super-secret-test-key" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{ \"customerId\": \"1234\" }" },
+        "url": {
+          "raw": "http://localhost:3000/ai/analyze-customer",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["ai", "analyze-customer"]
+        }
+      }
+    },
+    {
+      "name": "Webhook message (simulate whatsapp)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "x-api-key", "value": "super-secret-test-key" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"platform\": \"whatsapp\", \"message\": \"Show me customer 1234 performance\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/webhook/message",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["webhook", "message"]
+        }
+      }
+    }
+  ]
+}

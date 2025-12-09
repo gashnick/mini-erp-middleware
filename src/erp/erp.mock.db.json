@@ -1,0 +1,41 @@
+{
+  "customers": [
+    {
+      "id": "1234",
+      "name": "Alice Roberts",
+      "status": "Active",
+      "email": "alice@example.com",
+      "phone": "+250788000111"
+    },
+    {
+      "id": "5678",
+      "name": "Bob Kim",
+      "status": "Pending",
+      "email": "bob@example.com",
+      "phone": "+250788000222"
+    }
+  ],
+  "invoices": [
+    {
+      "invoiceId": "INV001",
+      "customerId": "1234",
+      "amount": 1200,
+      "paid": true,
+      "date": "2025-08-10"
+    },
+    {
+      "invoiceId": "INV002",
+      "customerId": "1234",
+      "amount": 500,
+      "paid": false,
+      "date": "2025-10-01"
+    },
+    {
+      "invoiceId": "INV003",
+      "customerId": "5678",
+      "amount": 200,
+      "paid": false,
+      "date": "2025-11-11"
+    }
+  ]
+}
